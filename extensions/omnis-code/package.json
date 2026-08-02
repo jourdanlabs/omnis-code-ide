@@ -1,0 +1,184 @@
+{
+  "name": "omnis-code",
+  "displayName": "OMNIS CODE — AI agent receipts",
+  "description": "Proves what it did, or refuses to say.",
+  "version": "0.1.0",
+  "publisher": "jourdanlabs",
+  "license": "SEE LICENSE IN LICENSE",
+  "engines": {
+    "vscode": "^1.125.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "keywords": [
+    "ai",
+    "agent",
+    "receipts",
+    "provenance",
+    "audit"
+  ],
+  "main": "./out/extension.js",
+  "activationEvents": [
+    "onStartupFinished"
+  ],
+  "contributes": {
+    "viewsContainers": {
+      "activitybar": [
+        {
+          "id": "omnisCode",
+          "title": "OMNIS CODE",
+          "icon": "media/key.svg"
+        }
+      ]
+    },
+    "views": {
+      "omnisCode": [
+        {
+          "id": "omnisCode.receipts",
+          "name": "Receipts"
+        },
+        {
+          "id": "omnisCode.claims",
+          "name": "Claims"
+        },
+        {
+          "id": "omnisCode.crucible",
+          "name": "CRUCIBLE"
+        }
+      ]
+    },
+    "mcpServerDefinitionProviders": [
+      {
+        "id": "omnisCode.cairn",
+        "label": "CAIRN — provable memory"
+      }
+    ],
+    "commands": [
+      {
+        "command": "omnisCode.receipts.refresh",
+        "title": "Refresh",
+        "category": "OMNIS CODE",
+        "icon": "$(refresh)"
+      },
+      {
+        "command": "omnisCode.receipts.verify",
+        "title": "Verify receipt chain",
+        "category": "OMNIS CODE",
+        "icon": "$(shield)"
+      },
+      {
+        "command": "omnisCode.receipts.copyHead",
+        "title": "Copy head hash",
+        "category": "OMNIS CODE"
+      },
+      {
+        "command": "omnisCode.receipts.copyRemedy",
+        "title": "Copy remedy command",
+        "category": "OMNIS CODE"
+      },
+      {
+        "command": "omnisCode.claims.refresh",
+        "title": "Refresh claims",
+        "category": "OMNIS CODE",
+        "icon": "$(refresh)"
+      },
+      {
+        "command": "omnisCode.claims.showRefusal",
+        "title": "Show me a refusal",
+        "category": "OMNIS CODE",
+        "icon": "$(circle-slash)"
+      },
+      {
+        "command": "omnisCode.run",
+        "title": "Run a turn",
+        "category": "OMNIS CODE",
+        "icon": "$(play)"
+      },
+      {
+        "command": "omnisCode.crucible.scan",
+        "title": "CRUCIBLE: scan this repository",
+        "category": "OMNIS CODE",
+        "icon": "$(search)"
+      },
+      {
+        "command": "omnisCode.crucible.load",
+        "title": "CRUCIBLE: reload latest stored scan",
+        "category": "OMNIS CODE",
+        "icon": "$(refresh)"
+      }
+    ],
+    "menus": {
+      "view/title": [
+        {
+          "command": "omnisCode.run",
+          "when": "view == omnisCode.receipts",
+          "group": "navigation@0"
+        },
+        {
+          "command": "omnisCode.receipts.verify",
+          "when": "view == omnisCode.receipts",
+          "group": "navigation@1"
+        },
+        {
+          "command": "omnisCode.receipts.refresh",
+          "when": "view == omnisCode.receipts",
+          "group": "navigation@2"
+        },
+        {
+          "command": "omnisCode.claims.showRefusal",
+          "when": "view == omnisCode.claims",
+          "group": "navigation@1"
+        },
+        {
+          "command": "omnisCode.claims.refresh",
+          "when": "view == omnisCode.claims",
+          "group": "navigation@2"
+        },
+        {
+          "command": "omnisCode.crucible.scan",
+          "when": "view == omnisCode.crucible",
+          "group": "navigation@1"
+        },
+        {
+          "command": "omnisCode.crucible.load",
+          "when": "view == omnisCode.crucible",
+          "group": "navigation@2"
+        }
+      ]
+    },
+    "configuration": {
+      "title": "OMNIS CODE",
+      "properties": {
+        "omnisCode.enginePath": {
+          "type": "string",
+          "default": "",
+          "description": "Full path to the omnis-key binary. Leave empty to auto-detect. VS Code does not inherit your shell PATH on macOS, so a user-local install may need this set explicitly."
+        },
+        "omnisCode.cairnServerScript": {
+          "type": "string",
+          "default": "",
+          "description": "Path to CAIRN's MCP server entry point. Leave empty to auto-detect at ~/projects/cairn/mcp/server.mjs."
+        },
+        "omnisCode.cairnUrl": {
+          "type": "string",
+          "default": "http://127.0.0.1:4611",
+          "description": "URL of the running CAIRN Studio engine."
+        }
+      }
+    }
+  },
+  "scripts": {
+    "compile": "tsc -p .",
+    "watch": "tsc -watch -p .",
+    "test": "npm run compile && node --test \"out/test/*.test.js\"",
+    "test:host": "npm run compile && \"/Applications/Visual Studio Code.app/Contents/MacOS/Electron\" --extensionDevelopmentPath=\"$PWD\" --extensionTestsPath=\"$PWD/out/test/host/index.js\" --no-sandbox",
+    "package": "vsce package",
+    "test:fresh": "npm run compile && OMNIS_EXPECT_STATE=EMPTY_NOT_YET_EVIDENCED JCODE_HOME=$(mktemp -d /tmp/ojh.XXXX)/virgin \"/Applications/Visual Studio Code.app/Contents/MacOS/Electron\" --extensionDevelopmentPath=\"$PWD\" --extensionTestsPath=\"$PWD/out/test/host/index.js\" --no-sandbox"
+  },
+  "devDependencies": {
+    "@types/node": "^20.11.0",
+    "@types/vscode": "^1.125.0",
+    "typescript": "^5.4.0"
+  }
+}

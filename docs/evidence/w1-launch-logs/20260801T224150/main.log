@@ -1,0 +1,8 @@
+2026-08-01 22:41:50.761 [info] StorageMainService: creating application shared storage
+2026-08-01 22:41:50.984 [info] [CSS_DEV] DONE, 429 css modules (215ms)
+2026-08-01 22:41:51.223 [info] update#setState disabled
+2026-08-01 22:41:51.402 [info] [shared storage] Creating shared storage database at '/Users/sokpyeon/.vscode-oss-shared/sharedStorage/state.vscdb' (wasCreated: true)
+2026-08-01 22:41:51.402 [info] [shared storage] Initializing fallback application storage (path: /tmp/omnis-code-ide-w1-jAXH/User/globalStorage/state.vscdb)
+2026-08-01 22:41:51.405 [info] [shared storage] Fallback application storage initialized with 3 items
+2026-08-01 22:41:52.159 [info] AgentHostProcessManager: agent host started
+2026-08-01 22:41:59.188 [info] Extension host with pid 27233 exited with code: 0, signal: unknown.

@@ -1,0 +1,5 @@
+ts: 2026-08-02T03:43:08.305351Z
+upstream_sha: 1b2f25580d1eaaeea7d18a3968565c818177d8e1
+node: v24.18.0
+electron: 42.7.1
+result: LAUNCH_OK — main+renderer+extension-host observed

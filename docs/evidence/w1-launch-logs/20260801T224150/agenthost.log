@@ -1,0 +1,53 @@
+2026-08-01 22:41:52.813 [info] Agent Host process started successfully
+2026-08-01 22:41:52.813 [error] CodeExpectedError: ENOPRO: No file system provider found for resource 'vscode-userdata:/tmp/omnis-code-ide-w1-jAXH/User'
+    at FileService.withProvider (file:///Users/sokpyeon/projects/omnis-code-ide/out/vs/platform/files/common/fileService.js:125:21)
+    at async FileService.doWatch (file:///Users/sokpyeon/projects/omnis-code-ide/out/vs/platform/files/common/fileService.js:807:22)
+    at async file:///Users/sokpyeon/projects/omnis-code-ide/out/vs/platform/files/common/fileService.js:780:28
+2026-08-01 22:41:52.813 [error] CodeExpectedError: ENOPRO: No file system provider found for resource 'vscode-userdata:/tmp/omnis-code-ide-w1-jAXH/User/settings.json'
+    at FileService.withProvider (file:///Users/sokpyeon/projects/omnis-code-ide/out/vs/platform/files/common/fileService.js:125:21)
+    at async FileService.doWatch (file:///Users/sokpyeon/projects/omnis-code-ide/out/vs/platform/files/common/fileService.js:807:22)
+    at async file:///Users/sokpyeon/projects/omnis-code-ide/out/vs/platform/files/common/fileService.js:780:28
+2026-08-01 22:41:52.813 [info] AgentService initialized
+2026-08-01 22:41:52.813 [info] Registering agent provider: copilotcli
+2026-08-01 22:41:52.813 [info] Registering agent provider: claude
+2026-08-01 22:41:52.825 [info] [WebSocketProtocol] Server listening on socket /var/folders/tb/v6p4_b7d3lx_sr9ckv9q9l980000gn/T/vscode-ah-34236c2863d1/TsXG0xA1nE72itD9W1w_Mw.sock
+2026-08-01 22:41:52.827 [info] [ProtocolServer] Initialize: clientId=06a66a4f-e03d-40a4-9993-f7f0cfe9e536, protocolVersions=[0.7.0, 0.6.0, 0.5.2, 0.5.1]
+2026-08-01 22:41:52.829 [info] [CommandAutoApprover] Tree-sitter initialized (bash=available, powershell=available)
+2026-08-01 22:41:53.479 [info] [Copilot] Listing sessions...
+2026-08-01 22:41:53.479 [info] [Copilot] Starting CopilotClient...
+2026-08-01 22:41:54.500 [info] [Copilot] Set CLI env: GITHUB_COPILOT_INTEGRATION_ID=code-oss
+2026-08-01 22:41:54.501 [info] [Copilot] Resolved CLI path: /Users/sokpyeon/projects/omnis-code-ide/node_modules/@github/copilot-darwin-arm64/index.js
+2026-08-01 22:41:56.040 [info] [Copilot] CopilotClient started successfully
+2026-08-01 22:41:56.042 [info] [Copilot] Found 0 sessions
+2026-08-01 22:41:56.047 [warning] [AgentHostStateManager] Action for unknown session: claude:/ffa49f34-c026-4b7b-9c94-933557dc4c22, type=session/isReadChanged
+2026-08-01 22:41:56.047 [warning] [AgentHostStateManager] Action for unknown session: claude:/dc2b7f11-3ac5-44c5-be09-07dca91a0d4d, type=session/isReadChanged
+2026-08-01 22:41:56.047 [warning] [AgentHostStateManager] Action for unknown session: claude:/1d53ba06-9d66-47cb-896a-055e1675b278, type=session/isReadChanged
+2026-08-01 22:41:56.047 [warning] [AgentHostStateManager] Action for unknown session: claude:/a879e0b0-204c-40f2-a7f1-52dbda88cacb, type=session/isReadChanged
+2026-08-01 22:41:56.047 [warning] [AgentHostStateManager] Action for unknown session: claude:/7b4429ee-926e-44b8-bbf0-ba91cbd7293d, type=session/isReadChanged
+2026-08-01 22:41:56.047 [warning] [AgentHostStateManager] Action for unknown session: claude:/ed4e1a7c-2a08-4c8b-aadc-fe8fccf1a34d, type=session/isReadChanged
+2026-08-01 22:41:56.047 [warning] [AgentHostStateManager] Action for unknown session: claude:/1a400cf6-a1e5-4945-bfc8-648c0fb29e15, type=session/isReadChanged
+2026-08-01 22:41:56.047 [warning] [AgentHostStateManager] Action for unknown session: claude:/e101f5aa-4744-466b-be4a-9ec5a3f8ee18, type=session/isReadChanged
+2026-08-01 22:41:56.047 [warning] [AgentHostStateManager] Action for unknown session: claude:/77868cec-fd9c-4d93-b794-76415688f107, type=session/isReadChanged
+2026-08-01 22:41:56.048 [warning] [AgentHostStateManager] Action for unknown session: claude:/9a95b518-55d2-497f-8cae-4dd3b07ccebd, type=session/isReadChanged
+2026-08-01 22:41:56.048 [warning] [AgentHostStateManager] Action for unknown session: claude:/6d5f4e51-4322-4794-a00d-ed9dccfaa2f6, type=session/isReadChanged
+2026-08-01 22:41:56.048 [warning] [AgentHostStateManager] Action for unknown session: claude:/50543519-6f95-43f1-95fc-95fc173a57eb, type=session/isReadChanged
+2026-08-01 22:41:56.048 [warning] [AgentHostStateManager] Action for unknown session: claude:/1840f1ef-62bb-40f4-874f-8d54ca7a4259, type=session/isReadChanged
+2026-08-01 22:41:56.048 [warning] [AgentHostStateManager] Action for unknown session: claude:/bab8a214-c9a3-47a2-9b58-ceaa37b6fc42, type=session/isReadChanged
+2026-08-01 22:41:56.048 [warning] [AgentHostStateManager] Action for unknown session: claude:/d1820bb3-b1de-42b9-bde1-1b1a447e5c6f, type=session/isReadChanged
+2026-08-01 22:41:56.048 [warning] [AgentHostStateManager] Action for unknown session: claude:/cd6ff4a1-3ff0-4ba9-81e1-c7b1bb477848, type=session/isReadChanged
+2026-08-01 22:41:56.048 [warning] [AgentHostStateManager] Action for unknown session: claude:/1ab35f64-269d-4b0f-8fed-891ab9acafde, type=session/isReadChanged
+2026-08-01 22:41:56.048 [warning] [AgentHostStateManager] Action for unknown session: claude:/30c2d2e9-c1f4-4fc7-b52d-fe742660f059, type=session/isReadChanged
+2026-08-01 22:41:56.048 [warning] [AgentHostStateManager] Action for unknown session: claude:/2979d251-e9f1-4ea6-a4db-c185ca6bd607, type=session/isReadChanged
+2026-08-01 22:41:56.048 [warning] [AgentHostStateManager] Action for unknown session: claude:/983fb458-36a5-49cb-ab61-9f33303239ff, type=session/isReadChanged
+2026-08-01 22:41:56.048 [warning] [AgentHostStateManager] Action for unknown session: claude:/fd4fdf5c-0953-4699-b52d-be65f3c088f0, type=session/isReadChanged
+2026-08-01 22:41:56.048 [warning] [AgentHostStateManager] Action for unknown session: claude:/f974d17c-740e-454f-aeb5-025c0879c154, type=session/isReadChanged
+2026-08-01 22:41:56.048 [warning] [AgentHostStateManager] Action for unknown session: claude:/fac2d2eb-cc83-4e1d-8205-4baa9e214486, type=session/isReadChanged
+2026-08-01 22:41:56.048 [warning] [AgentHostStateManager] Action for unknown session: claude:/1fbd5fa4-a398-41d2-9539-fa3aa062cd3e, type=session/isReadChanged
+2026-08-01 22:41:56.048 [warning] [AgentHostStateManager] Action for unknown session: claude:/073a5dab-b3f4-4648-bf75-40072ef60333, type=session/isReadChanged
+2026-08-01 22:41:56.048 [warning] [AgentHostStateManager] Action for unknown session: claude:/a31851a7-dada-46cd-ab40-53fde676ba0b, type=session/isReadChanged
+2026-08-01 22:41:56.048 [warning] [AgentHostStateManager] Action for unknown session: claude:/8e3804f7-64d2-4fd4-b626-ad7ed69193e3, type=session/isReadChanged
+2026-08-01 22:41:56.049 [warning] [AgentHostStateManager] Action for unknown session: claude:/cec27124-df1c-4ff8-82c7-560565da5e57, type=session/isReadChanged
+2026-08-01 22:41:56.049 [warning] [AgentHostStateManager] Action for unknown session: claude:/a3add005-eaee-4ccb-a561-d64025e2702c, type=session/isReadChanged
+2026-08-01 22:41:56.049 [warning] [AgentHostStateManager] Action for unknown session: claude:/bfbdc902-5f41-4eae-bd53-7cc8d444f73d, type=session/isReadChanged
+2026-08-01 22:41:56.049 [warning] [AgentHostStateManager] Action for unknown session: claude:/cee3e5a9-a59f-4746-afd6-f232bda9523e, type=session/isReadChanged
+2026-08-01 22:41:56.049 [warning] [AgentHostStateManager] Action for unknown session: claude:/727965e0-3e3c-4a5c-981d-a185be215485, type=session/isReadChanged

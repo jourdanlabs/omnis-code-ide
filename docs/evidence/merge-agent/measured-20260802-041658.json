@@ -1,0 +1,16 @@
+{
+  "ts": "2026-08-02T04:16:58.690Z",
+  "mode": "synthetic",
+  "work_branch": "omnis/merge-work/20260802-041658",
+  "from": "1a53452279f60dbba08e32c68411808240ddd83a",
+  "to": "58d9162108cb9d315a0ff00188d1328d61d0a16d",
+  "conflicts": "none",
+  "build": "PASS",
+  "canary": "PASS",
+  "canary_can_fail": "PASS",
+  "write_gate": {
+    "healthy": "PASS",
+    "tampered": "PASS",
+    "engine_gone": "PASS"
+  }
+}
